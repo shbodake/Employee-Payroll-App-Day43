@@ -136,6 +136,13 @@ label {
     background-color: transparent;
 }
 
+.buttonParent{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
 .button {
     font-size: 20px;
     font-family: Roboto;
@@ -199,5 +206,8 @@ label {
     .buttonParent {
         flex-direction: column-reverse;
         align-items: flex-start;
+    }
+    .profile-radio-content{
+        flex-flow: wrap;
     }
 }
