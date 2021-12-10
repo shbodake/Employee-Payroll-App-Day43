@@ -24,12 +24,10 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 0px solid green;
+    border: 0px solid #42515f;
     width: 80%;
 }
 
-.logo-content-img {
-    border: 0px solid #42515f;
 }
 
 .emp-text {
