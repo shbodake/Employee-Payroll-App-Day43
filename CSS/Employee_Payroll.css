@@ -1,22 +1,26 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     height: 100%;
 }
 
- .header{
+.header {
     padding: 15px 0;
     background-color: #ffffff;
 }
 
-.header-content{
+.header-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 0px solid green;
+    border: 1px solid green;
 }
 
-.logo-content{
+.logo-content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -24,24 +28,21 @@ body{
     width: 80%;
 }
 
-.logo-content-img{
-    border: solid 0px #155c9e;
+.logo-content-img {
+    border: 0px solid #42515f;
 }
 
-.emp-text{
-    font: normal normal bold 20px/25px Montserrat;
-    font-family: "Montserrat", sans-serif; 
+.emp-text {
+    font: normal normal bold 20px/20px Montserrat;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 0px;
-    color: #a10c63;
+    color: #82A70C;
+    padding-left: 10px;
     text-transform: capitalize;
 }
 
-.emp-payroll{
-    color: #54be23;
-}
-
-* {
-    box-sizing: border-box;
+.emp-payroll {
+    color: #42515f;
 }
 
 .form-content {
@@ -64,9 +65,9 @@ body{
 }
 
 .form-head {
-    font: normal normal bold 24px/37px Roboto;
+    font: normal normal bold 28px/37px Roboto;
     letter-spacing: 0px;
-    color: #42515f;
+    color: #42515F;
     text-transform: capitalize;
     opacity: 1;
     padding-bottom: 20px;
@@ -85,13 +86,13 @@ body{
 }
 
 label {
-    padding: 12px 12px 12px 0;
+    padding: 12px 12px 12px 0px;
     display: inline-block;
 }
 
 .text {
     font-size: 16px;
-    color: #42515f;
+    color: #43515f;
     opacity: 1;
     font-family: Roboto;
 }
@@ -99,7 +100,7 @@ label {
 .input {
     width: 100%;
     padding: 12px;
-    bottom: 1px solid rgba(168, 168, 167, 0.822);
+    border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
 }
@@ -107,6 +108,7 @@ label {
 .profile-radio-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .profile-radio-content>label {
@@ -120,23 +122,19 @@ label {
     border-radius: 50%;
     margin-left: 12px;
 }
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
 
-.select {
+select {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-    font: normal normal 16px Roboto;
+    font: normal normal normal 16px Roboto;
     letter-spacing: 0px;
     color: #42515f;
     background-color: transparent;
 }
 
-.buttonParent{
+.buttonParent {
     display: flex;
     margin-bottom: 10px;
     justify-content: space-between;
@@ -150,7 +148,8 @@ label {
     color: #42515f;
     opacity: 1;
     background: transparent;
-    border: none;
+    border: 1px solid #969696;
+    border-radius: 5px;
     font-weight: 400;
     min-width: 140px;
     padding: 7px 7px;
@@ -159,14 +158,39 @@ label {
 }
 
 .submitButton {
-    border: 1px;
-    background-color: #f5f5f5;
     margin-right: 30px;
 }
 
 .cancelButton {
-    text-decoration: none;
+    text-decoration: node;
     text-align: center;
+}
+
+.resetButton {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width:600px) {
+    .form {
+        margin-top: 10px;
+    }
+    .submit-reset {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between
+    }
+    .cancelButton {
+        margin-left: 0px;
+    }
+    .form {
+        width: 85%;
+        padding: 44ox 20px;
+    }
+    .profile-lable {
+        margin-left: 0px;
+    }
 }
 
 @media only screen and (max-width: 960px) {
@@ -179,35 +203,21 @@ label {
     }
 }
 
-@media only screen and (max-width:600px) {
-    .form {
-        margin-top: 10px;
-    }
-    .row {
-        flex-direction: column;
-    }
-    .uploadbutton {
-        justify-content: column;
-    }
-    .profile-radio-content {
-        flex-flow: wrap;
-    }
-    .submit-reset {
-        width: 100%;
-        display: flex;
-        flex-grow: 1;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-    .submitButtton {
-        margin: 1;
-    }
-    .buttonParent {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-    }
-    .profile-radio-content{
-        flex-flow: wrap;
-    }
+a.button:hover {
+    background: grey;
+    color: white;
+}
+
+.submitButton:hover {
+    background-color: #82A70C;
+    color: white;
+}
+
+.resetButton:hover {
+    background: grey;
+    color: white;
+}
+
+.department {
+    margin-left: 30px;
 }
